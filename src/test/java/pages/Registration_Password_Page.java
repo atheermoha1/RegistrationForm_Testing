@@ -8,13 +8,22 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.Driver;
 
 import java.time.Duration;
+<<<<<<< HEAD
 
+=======
+import java.util.ArrayList;
+import java.util.List;
+>>>>>>> 185f4d34170342740673f8efd1e2fc03838ffe52
 
 public class Registration_Password_Page {
     public By ssn = By.id("ssn");
     public By firstName = By.id("firstName");
     public By lastName = By.id("lastName");
+<<<<<<< HEAD
     public By gender=By.xpath("//label[@for='male']");
+=======
+    public By gender = By.id("female");
+>>>>>>> 185f4d34170342740673f8efd1e2fc03838ffe52
     public By userName = By.id("username");
     public By job = By.id("job");
     public By cv = By.id("cv");
@@ -59,10 +68,17 @@ public class Registration_Password_Page {
         return this;
     }
 
+<<<<<<< HEAD
 //    public int passwordTrack() {
 //        String value = Driver.getDriver().findElement(passTracker).getAttribute("value");
 //        return Integer.parseInt(value);
 //    }
+=======
+    public int passwordTrack() {
+        String value = Driver.getDriver().findElement(passTracker).getAttribute("value");
+        return Integer.parseInt(value);
+    }
+>>>>>>> 185f4d34170342740673f8efd1e2fc03838ffe52
 
     public Registration_Password_Page clicksubmit() {
         Driver.getDriver().findElement(this.submitButton).click();
@@ -88,7 +104,12 @@ public class Registration_Password_Page {
 
     public int passStrength() {
         new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(2))
+<<<<<<< HEAD
         .until(driver -> Driver.getDriver().findElement(this.passTracker).getAttribute("value") != null);
+=======
+                .until(driver -> Driver.getDriver().findElement(this.passTracker).getAttribute("value") != null);
+
+>>>>>>> 185f4d34170342740673f8efd1e2fc03838ffe52
         String value = Driver.getDriver().findElement(passTracker).getAttribute("value");
         return Integer.parseInt(value);
     }
@@ -100,6 +121,7 @@ public class Registration_Password_Page {
         boolean digit = pass.chars().anyMatch(Character::isDigit);
         return length && upper && lower && digit;
     }
+<<<<<<< HEAD
     public Registration_Password_Page Form(){
         enterSSN("123-45-4567");
         enterFirstName("John");
@@ -109,4 +131,6 @@ public class Registration_Password_Page {
         enterEmail("john@yahoo.com");
         return this;
     }
+=======
+>>>>>>> 185f4d34170342740673f8efd1e2fc03838ffe52
 }

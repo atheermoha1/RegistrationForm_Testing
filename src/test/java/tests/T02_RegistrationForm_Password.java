@@ -27,9 +27,13 @@ public class T02_RegistrationForm_Password {
             ExtentReportManager.createTest("field is masked");
             Driver.getDriver().get(ConfigReader.getProperty("form_url"));
             ExtentReportManager.log(Status.INFO,"Navigated To Registration Page");
+<<<<<<< HEAD
             password_page.Form();
             Assert.assertTrue(password_page.PasswordType(),"password is not masked");
             password_page.clicksubmit();
+=======
+            Assert.assertTrue(password_page.PasswordType(),"password is not masked");
+>>>>>>> 185f4d34170342740673f8efd1e2fc03838ffe52
             ExtentReportManager.log(Status.PASS,"password is successfully masked");
         }
 
@@ -40,9 +44,14 @@ public class T02_RegistrationForm_Password {
             ExtentReportManager.createTest("Enter your password as placeholder");
             Driver.getDriver().get(ConfigReader.getProperty("form_url"));
             ExtentReportManager.log(Status.INFO,"Navigated To Registration Page");
+<<<<<<< HEAD
             password_page.Form();
             Assert.assertTrue(password_page.PasswordPlaceHolder(),"wrong placeholder");
             password_page.clicksubmit();
+=======
+
+            Assert.assertTrue(password_page.PasswordPlaceHolder(),"wrong placeholder");
+>>>>>>> 185f4d34170342740673f8efd1e2fc03838ffe52
             ExtentReportManager.log(Status.PASS,"placeholder is correct");
         }
 
@@ -55,9 +64,13 @@ public class T02_RegistrationForm_Password {
             ExtentReportManager.log(Status.INFO,"Navigated To Registration Page");
 
             String password ="John12doe";
+<<<<<<< HEAD
             password_page.Form();
             password_page.enterPass(password);
             password_page.clicksubmit();
+=======
+            password_page.enterPass(password);
+>>>>>>> 185f4d34170342740673f8efd1e2fc03838ffe52
             Assert.assertTrue(password_page.validPassword(password),"password is invalid");
             ExtentReportManager.log(Status.PASS," password is valid");
         }
@@ -70,7 +83,10 @@ public class T02_RegistrationForm_Password {
             Driver.getDriver().get(ConfigReader.getProperty("form_url"));
             ExtentReportManager.log(Status.INFO,"Navigated To Registration Page");
 
+<<<<<<< HEAD
             password_page.Form();
+=======
+>>>>>>> 185f4d34170342740673f8efd1e2fc03838ffe52
             String password ="John12doe*";
             password_page.enterPass(password);
             password_page.clear();
@@ -87,7 +103,10 @@ public class T02_RegistrationForm_Password {
             ExtentReportManager.log(Status.INFO,"Navigated To Registration Page");
 
             String invalidpassword ="JohnDoe";
+<<<<<<< HEAD
             password_page.Form();
+=======
+>>>>>>> 185f4d34170342740673f8efd1e2fc03838ffe52
             password_page.enterPass(invalidpassword);
             Assert.assertFalse(password_page.validPassword(invalidpassword),"password is invalid");
             ExtentReportManager.log(Status.PASS,"CV Button can be click");
