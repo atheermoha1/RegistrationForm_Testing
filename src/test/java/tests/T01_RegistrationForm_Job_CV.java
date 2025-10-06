@@ -28,11 +28,8 @@ public class T01_RegistrationForm_Job_CV {
         ExtentReportManager.createTest("Job field displays Select a job as default placeholder");
         Driver.getDriver().get(ConfigReader.getProperty("form_url"));
         ExtentReportManager.log(Status.INFO,"Navigated To Registration Page");
-<<<<<<< HEAD
         //fill the form
         registrationPage.Form();
-=======
->>>>>>> 185f4d34170342740673f8efd1e2fc03838ffe52
         String text= registrationPage.FirstJob();
         Assert.assertEquals(text,"Select a job");
         ExtentReportManager.log(Status.PASS,"select a job appears as default");
@@ -45,12 +42,8 @@ public class T01_RegistrationForm_Job_CV {
         ExtentReportManager.createTest(" job options are appear all");
         Driver.getDriver().get(ConfigReader.getProperty("form_url"));
         ExtentReportManager.log(Status.INFO,"Navigated To Registration Page");
-<<<<<<< HEAD
         //fill the form
         registrationPage.Form();
-=======
-
->>>>>>> 185f4d34170342740673f8efd1e2fc03838ffe52
         List<String> select= registrationPage.selectJobOptions();
         int allOptions= select.size();
         Assert.assertEquals(allOptions,6);
@@ -64,11 +57,8 @@ public class T01_RegistrationForm_Job_CV {
         ExtentReportManager.createTest(" jobs can be select after click on it");
         Driver.getDriver().get(ConfigReader.getProperty("form_url"));
         ExtentReportManager.log(Status.INFO,"Navigated To Registration Page");
-<<<<<<< HEAD
         //fill the form
         registrationPage.Form();
-=======
->>>>>>> 185f4d34170342740673f8efd1e2fc03838ffe52
         registrationPage.selectSpecificJob("Tester");
         Assert.assertEquals(registrationPage.FirstJob(),"Tester");
         ExtentReportManager.log(Status.PASS,"successfully selection of job Tester");
@@ -81,12 +71,9 @@ public class T01_RegistrationForm_Job_CV {
         ExtentReportManager.createTest("Job and CV fields are displayed side-by-side");
         Driver.getDriver().get(ConfigReader.getProperty("form_url"));
         ExtentReportManager.log(Status.INFO,"Navigated To Registration Page");
-<<<<<<< HEAD
         //fill the form
         registrationPage.Form();
         registrationPage.clicksubmit();
-=======
->>>>>>> 185f4d34170342740673f8efd1e2fc03838ffe52
         Assert.assertTrue(registrationPage.JobCVsideBySide(),"Job selection and CV button are side By side");
         ExtentReportManager.log(Status.PASS,"Job selection and CV button are side By side");
     }
@@ -98,15 +85,10 @@ public class T01_RegistrationForm_Job_CV {
         ExtentReportManager.createTest("verify CV file button can be clickable");
         Driver.getDriver().get(ConfigReader.getProperty("form_url"));
         ExtentReportManager.log(Status.INFO,"Navigated To Registration Page");
-<<<<<<< HEAD
         //fill the form
         registrationPage.Form();
         registrationPage.clickCV();
         ExtentReportManager.log(Status.FAIL,"CV Button can be click");
-=======
-        Assert.assertTrue( registrationPage.clickCV());
-        ExtentReportManager.log(Status.PASS,"CV Button can be click");
->>>>>>> 185f4d34170342740673f8efd1e2fc03838ffe52
     }
 
 
@@ -117,21 +99,12 @@ public class T01_RegistrationForm_Job_CV {
         ExtentReportManager.createTest("verify CV file name is appear");
         Driver.getDriver().get(ConfigReader.getProperty("form_url"));
         ExtentReportManager.log(Status.INFO,"Navigated To Registration Page");
-<<<<<<< HEAD
         //fill the form
         registrationPage.Form();
         String file="C:\\Users\\ASUS\\Documents\\Result_Form_Report.pdf";
         registrationPage.uploadCV(file);
         String fileName= registrationPage.fileName();
         registrationPage.clicksubmit();
-
-=======
-
-        String file="C:\\Users\\ASUS\\Documents\\Result_Form_Report.pdf";
-        registrationPage.uploadCV(file);
-
-        String fileName= registrationPage.fileName();
->>>>>>> 185f4d34170342740673f8efd1e2fc03838ffe52
         Assert.assertTrue(fileName.contains(".pdf"), "Uploaded file should be a PDF");
         ExtentReportManager.log(Status.PASS,"CV Button can be click and upload a file successfully");
     }

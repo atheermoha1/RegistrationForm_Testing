@@ -12,11 +12,7 @@ public class Registration_Job_CV_Page {
     public By ssn= By.id("ssn");
     public By firstName= By.id("firstName");
     public By lastName= By.id("lastName");
-<<<<<<< HEAD
     public By gender=By.xpath("//label[@for='male']");
-=======
-    public By gender=By.id("female");
->>>>>>> 185f4d34170342740673f8efd1e2fc03838ffe52
     public By userName=By.id("username");
     public By job=By.id("job");
     public By cv=By.id("cv");
@@ -57,17 +53,14 @@ public class Registration_Job_CV_Page {
         return this;
     }
 
-<<<<<<< HEAD
 //    public int passwordTrack(){
 //      String value=Driver.getDriver().findElement(passTracker).getAttribute("value");
 //     return Integer.parseInt(value);
 //    }
-=======
     public int passwordTrack(){
       String value=Driver.getDriver().findElement(passTracker).getAttribute("value");
      return Integer.parseInt(value);
     }
->>>>>>> 185f4d34170342740673f8efd1e2fc03838ffe52
 
     public Registration_Job_CV_Page clicksubmit(){
         Driver.getDriver().findElement(this.submitButton).click();
@@ -99,16 +92,15 @@ public class Registration_Job_CV_Page {
         return  select.getFirstSelectedOption().getText();
     }
 
-<<<<<<< HEAD
     public void clickCV(){
         WebElement button=Driver.getDriver().findElement(this.cv);
         button.click();
-=======
-    public boolean clickCV(){
-        WebElement button=Driver.getDriver().findElement(this.cv);
-        return button.isEnabled()&&button.isDisplayed();
->>>>>>> 185f4d34170342740673f8efd1e2fc03838ffe52
     }
+
+//    public boolean clickCV(){
+//        WebElement button=Driver.getDriver().findElement(this.cv);
+//        return button.isEnabled()&&button.isDisplayed();
+//    }
 
     public void uploadCV(String file){
         WebElement button=Driver.getDriver().findElement(this.cv);
@@ -126,7 +118,6 @@ public class Registration_Job_CV_Page {
         return cv.getLocation().getX()>job.getLocation().getX();
     }
 
-<<<<<<< HEAD
     public Registration_Job_CV_Page Form(){
         enterSSN("123-45-4567");
         enterFirstName("John");
@@ -137,9 +128,5 @@ public class Registration_Job_CV_Page {
         enterPass("johnDo12");
         return this;
     }
-
-=======
->>>>>>> 185f4d34170342740673f8efd1e2fc03838ffe52
-
 
 }
