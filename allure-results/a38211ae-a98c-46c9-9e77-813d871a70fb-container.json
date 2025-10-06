@@ -1,0 +1,1 @@
+{"uuid":"a38211ae-a98c-46c9-9e77-813d871a70fb","name":"tests.T02_RegistrationForm_Password","children":["4c917ac3-246d-43c8-8267-694100ad73bb"],"befores":[],"afters":[{"name":"TearDown","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1759712700199,"stop":1759712703762}],"start":1759712697192,"stop":1759712703777}
