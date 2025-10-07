@@ -53,10 +53,7 @@ public class Registration_Job_CV_Page {
         return this;
     }
 
-//    public int passwordTrack(){
-//      String value=Driver.getDriver().findElement(passTracker).getAttribute("value");
-//     return Integer.parseInt(value);
-//    }
+
     public int passwordTrack(){
       String value=Driver.getDriver().findElement(passTracker).getAttribute("value");
      return Integer.parseInt(value);
@@ -92,15 +89,15 @@ public class Registration_Job_CV_Page {
         return  select.getFirstSelectedOption().getText();
     }
 
-    public void clickCV(){
-        WebElement button=Driver.getDriver().findElement(this.cv);
-        button.click();
-    }
-
-//    public boolean clickCV(){
+//    public void clickCV(){
 //        WebElement button=Driver.getDriver().findElement(this.cv);
-//        return button.isEnabled()&&button.isDisplayed();
+//        button.click();
 //    }
+
+    public boolean clickCV(){
+        WebElement button=Driver.getDriver().findElement(this.cv);
+        return button.isEnabled()&&button.isDisplayed();
+    }
 
     public void uploadCV(String file){
         WebElement button=Driver.getDriver().findElement(this.cv);

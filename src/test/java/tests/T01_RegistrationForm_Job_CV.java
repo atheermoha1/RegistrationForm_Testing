@@ -87,8 +87,9 @@ public class T01_RegistrationForm_Job_CV {
         ExtentReportManager.log(Status.INFO,"Navigated To Registration Page");
         //fill the form
         registrationPage.Form();
-        registrationPage.clickCV();
-        ExtentReportManager.log(Status.FAIL,"CV Button can be click");
+        Assert.assertTrue(registrationPage.clickCV(),"CV Button can be click");
+        ExtentReportManager.log(Status.PASS,"CV Button can be click");
+
     }
 
 

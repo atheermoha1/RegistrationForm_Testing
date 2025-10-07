@@ -1,0 +1,1 @@
+{"uuid":"271359b5-82b8-4a90-b33c-12bb00c19fca","name":"tests.T01_RegistrationForm_Job_CV","children":["b59692f3-d887-4f5a-80c4-74de361f592d"],"befores":[],"afters":[{"name":"TearDown","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1759837497333,"stop":1759837501251}],"start":1759837492205,"stop":1759837501299}
